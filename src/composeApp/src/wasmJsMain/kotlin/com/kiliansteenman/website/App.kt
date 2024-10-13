@@ -1,6 +1,11 @@
 package com.kiliansteenman.website
 
+import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
 import com.kiliansteenman.website.theme.WebTheme
 import website.composeapp.generated.resources.Res
 import website.composeapp.generated.resources.social_github
@@ -9,7 +14,10 @@ import website.composeapp.generated.resources.social_x
 
 @Composable
 fun App() {
-    WebTheme {
+    val isSystemDark = isSystemInDarkTheme()
+    var isDark by remember { mutableStateOf(isSystemDark) }
+
+    WebTheme(darkTheme = isDark) {
         Website(
             title = "Kilian Steenman",
             subtitle = "Software Engineer - Android Development",
@@ -31,6 +39,8 @@ fun App() {
                     icon = Res.drawable.social_x,
                 ),
             ),
+            isDark = isDark,
+            onDarkThemeToggled = { checked -> isDark = checked }
         )
     }
 }

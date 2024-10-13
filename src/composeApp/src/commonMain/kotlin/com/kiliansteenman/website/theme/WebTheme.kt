@@ -60,16 +60,19 @@ fun RobotoSlabTypography() = Typography().run {
         titleLarge = titleLarge.copy(
             fontFamily = fontFamily,
             fontSize = 42.sp,
+            color = MaterialTheme.colorScheme.onBackground,
         ),
         titleMedium = titleMedium.copy(
             fontFamily = fontFamily,
             fontWeight = FontWeight.Light,
             fontSize = 20.sp,
+            color = MaterialTheme.colorScheme.onBackground,
         ),
         titleSmall = titleSmall.copy(
             fontFamily = fontFamily,
             fontWeight = FontWeight.SemiBold,
             fontSize = 16.sp,
+            color = MaterialTheme.colorScheme.onBackground,
         ),
         bodyLarge = bodyLarge.copy(fontFamily = fontFamily),
         bodyMedium = bodyMedium.copy(fontFamily = fontFamily),
