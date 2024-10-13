@@ -1,14 +1,15 @@
 package com.kiliansteenman.website
 
-import androidx.compose.material.MaterialTheme
 import androidx.compose.runtime.Composable
+import com.kiliansteenman.website.theme.WebTheme
 import website.composeapp.generated.resources.Res
-import website.composeapp.generated.resources.github
-import website.composeapp.generated.resources.linkedin
+import website.composeapp.generated.resources.social_github
+import website.composeapp.generated.resources.social_linkedin
+import website.composeapp.generated.resources.social_x
 
 @Composable
 fun App() {
-    MaterialTheme {
+    WebTheme {
         Website(
             title = "Kilian Steenman",
             subtitle = "Software Engineer - Android Development",
@@ -17,32 +18,19 @@ fun App() {
                 Social(
                     title = "Github",
                     url = "https://github.com/kiliansteenman",
-                    icon = Res.drawable.github,
+                    icon = Res.drawable.social_github,
                 ),
                 Social(
                     title = "LinkedIn",
                     url = "https://www.linkedin.com/in/kilian-steenman",
-                    icon = Res.drawable.linkedin,
+                    icon = Res.drawable.social_linkedin,
                 ),
                 Social(
                     title = "X",
                     url = "X",
-                    icon = Res.drawable.linkedin,
+                    icon = Res.drawable.social_x,
                 ),
             ),
         )
-//        var showContent by remember { mutableStateOf(false) }
-//        Column(Modifier.fillMaxWidth(), horizontalAlignment = Alignment.CenterHorizontally) {
-//            Button(onClick = { showContent = !showContent }) {
-//                Text("Click me!")
-//            }
-//            AnimatedVisibility(showContent) {
-//                val greeting = remember { Greeting().greet() }
-//                Column(Modifier.fillMaxWidth(), horizontalAlignment = Alignment.CenterHorizontally) {
-//                    Image(painterResource(Res.drawable.compose_multiplatform), null)
-//                    Text("Compose: $greeting")
-//                }
-//            }
-//        }
     }
 }
