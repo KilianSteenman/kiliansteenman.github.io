@@ -9,5 +9,48 @@
     <script type="application/javascript" src="composeApp.js"></script>
 </head>
 <body>
+    <main>
+        <div class="content-wrapper">
+            <img src="composeResources/website.composeapp.generated.resources/drawable/profile_pic.jpeg" alt="Avatar" class="avatar"/>
+            <h1 class="primary-title">Kilian Steenman</h1>
+            <h2 class="secondary-title">Software engineer - Android development</h2>
+            <ul class="social">
+                <li>
+                    <a href="https://github.com/kiliansteenman">
+                    <span class="social-item-bg">
+                        <img src="composeResources/website.composeapp.generated.resources/drawable/social_github.svg" alt="GitHub - Kilian Steenman" class="social-item">
+                    </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.linkedin.com/in/kilian-steenman">
+                    <span class="social-item-bg">
+                        <img src="composeResources/website.composeapp.generated.resources/drawable/social_linkedin.svg" alt="LinkedIn - Kilian Steenman" class="social-item">
+                    </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="-">
+                    <span class="social-item-bg">
+                        <img src="composeResources/website.composeapp.generated.resources/drawable/social_x.svg" alt="X - Shdow-Link" class="social-item">
+                    </span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </main>
 </body>
+<script type="application/javascript" >
+    const unhandledError = (event, error) => {
+        if (error instanceof WebAssembly.CompileError) {
+            document.getElementsByTagName("main")[0].style.display="initial";
+
+            // Hide a Scary Webpack Overlay which is less informative in this case.
+            const webpackOverlay = document.getElementById("webpack-dev-server-client-overlay");
+            if (webpackOverlay != null) webpackOverlay.style.display="none";
+        }
+    }
+    addEventListener("error", (event) => unhandledError(event, event.error));
+    addEventListener("unhandledrejection", (event) => unhandledError(event, event.reason));
+</script>
 </html>

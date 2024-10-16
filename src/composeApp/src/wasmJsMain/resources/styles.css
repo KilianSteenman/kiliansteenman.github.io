@@ -4,6 +4,10 @@ html, body {
     height: 100%;
 }
 
+main {
+    display: none;
+}
+
 body {
     background: var(--bkg-color);
     margin: 0;

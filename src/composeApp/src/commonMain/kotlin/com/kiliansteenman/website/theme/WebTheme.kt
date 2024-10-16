@@ -12,7 +12,6 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.sp
 import org.jetbrains.compose.resources.Font
 import website.composeapp.generated.resources.Res
-import website.composeapp.generated.resources.RobotoSlab_Bold
 import website.composeapp.generated.resources.RobotoSlab_Light
 import website.composeapp.generated.resources.RobotoSlab_Regular
 import website.composeapp.generated.resources.RobotoSlab_SemiBold
@@ -33,7 +32,6 @@ fun RobotoSlabFontFamily() = FontFamily(
     Font(Res.font.RobotoSlab_Light, weight = FontWeight.Light),
     Font(Res.font.RobotoSlab_Regular, weight = FontWeight.Normal),
     Font(Res.font.RobotoSlab_SemiBold, weight = FontWeight.SemiBold),
-    Font(Res.font.RobotoSlab_Bold, weight = FontWeight.Bold),
 )
 
 @Composable
@@ -51,7 +49,7 @@ fun RobotoSlabTypography() = Typography().run {
         ),
         displaySmall = displaySmall.copy(
             fontFamily = fontFamily,
-            fontWeight = FontWeight.Bold,
+            fontWeight = FontWeight.SemiBold,
             fontSize = 24.sp
         ),
         headlineLarge = headlineLarge.copy(fontFamily = fontFamily),
