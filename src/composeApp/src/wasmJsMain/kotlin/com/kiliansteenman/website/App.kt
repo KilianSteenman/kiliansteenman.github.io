@@ -35,7 +35,7 @@ fun App() {
                 ),
                 Social(
                     title = "X",
-                    url = "X",
+                    url = "https://x.com/Shad0w_Link",
                     icon = Res.drawable.social_x,
                 ),
             ),
