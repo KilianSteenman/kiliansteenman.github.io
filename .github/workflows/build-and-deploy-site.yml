@@ -3,7 +3,7 @@ name: Deploy site to Pages
 on:
   push:
     branches:
-      - actions
+      - master
 
   workflow_dispatch:
 
