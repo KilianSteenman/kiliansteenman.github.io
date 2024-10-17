@@ -5,7 +5,8 @@ import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.ExperimentalLayoutApi
+import androidx.compose.foundation.layout.FlowRow
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.shape.CircleShape
@@ -27,9 +28,11 @@ data class Social(
     val url: String,
 )
 
+@OptIn(ExperimentalLayoutApi::class)
 @Composable
 internal fun SocialBar(socials: List<Social>) {
-    Row(
+    FlowRow(
+        verticalArrangement = Arrangement.spacedBy(24.dp),
         horizontalArrangement = Arrangement.spacedBy(24.dp),
         modifier = Modifier
             .background(
@@ -37,7 +40,7 @@ internal fun SocialBar(socials: List<Social>) {
                 shape = RoundedCornerShape(percent = 100),
             )
             .shadow(elevation = 10.dp, shape = RoundedCornerShape(percent = 100))
-            .padding(vertical = 8.dp, horizontal = 32.dp),
+            .padding(8.dp),
     ) {
         socials.forEach { social ->
             SocialItem(social)

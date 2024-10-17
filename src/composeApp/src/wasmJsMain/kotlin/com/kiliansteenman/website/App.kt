@@ -21,7 +21,6 @@ fun App(isDarkThemeEnforced: Boolean?, onDarkThemeToggled: (isDark: Boolean) -> 
         Website(
             title = "Kilian Steenman",
             subtitle = "Software Engineer - Android Development",
-            email = "info@kiliansteenman.com",
             socials = listOf(
                 Social(
                     title = "Github",

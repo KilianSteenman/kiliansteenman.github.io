@@ -2,6 +2,7 @@ package com.kiliansteenman.website
 
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.Image
+import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.shape.CircleShape
@@ -25,6 +26,7 @@ fun ProfilePicture(modifier: Modifier = Modifier, image: DrawableResource) {
                 border = BorderStroke(width = 8.dp, color = Color.White),
             )
             .shadow(elevation = 8.dp, shape = CircleShape)
+            .background(color = Color.White)
             .clip(CircleShape),
     )
 }
