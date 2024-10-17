@@ -13,8 +13,8 @@ import website.composeapp.generated.resources.social_linkedin
 import website.composeapp.generated.resources.social_x
 
 @Composable
-fun App() {
-    val isSystemDark = isSystemInDarkTheme()
+fun App(isDarkThemeEnforced: Boolean?, onDarkThemeToggled: (isDark: Boolean) -> Unit) {
+    val isSystemDark = isDarkThemeEnforced ?: isSystemInDarkTheme()
     var isDark by remember { mutableStateOf(isSystemDark) }
 
     WebTheme(darkTheme = isDark) {
@@ -40,7 +40,10 @@ fun App() {
                 ),
             ),
             isDark = isDark,
-            onDarkThemeToggled = { checked -> isDark = checked }
+            onDarkThemeToggled = { checked ->
+                isDark = checked
+                onDarkThemeToggled(checked)
+            }
         )
     }
 }
