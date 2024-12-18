@@ -8,6 +8,7 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import com.kiliansteenman.website.theme.WebTheme
 import website.composeapp.generated.resources.Res
+import website.composeapp.generated.resources.social_bluesky
 import website.composeapp.generated.resources.social_github
 import website.composeapp.generated.resources.social_linkedin
 import website.composeapp.generated.resources.social_x
@@ -31,6 +32,11 @@ fun App(isDarkThemeEnforced: Boolean?, onDarkThemeToggled: (isDark: Boolean) -> 
                     title = "LinkedIn",
                     url = "https://www.linkedin.com/in/kilian-steenman",
                     icon = Res.drawable.social_linkedin,
+                ),
+                Social(
+                    title = "Bluesky",
+                    url = "https://bsky.app/profile/shdow-link.bsky.social",
+                    icon = Res.drawable.social_bluesky,
                 ),
                 Social(
                     title = "X",
